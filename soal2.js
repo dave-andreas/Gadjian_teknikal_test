@@ -5,21 +5,14 @@ const fibonacci = (n) => {
     while (i<n+1) {
         if (i<=1) {
             arr[i] = i
+            out += `${arr[i]} `
         } else {
             arr[i] = arr[i-1] + arr[i-2]
+            out += `${arr[i]} `
         }
         i++
-    }
-    var j = 0
-    while (j<arr.length) {
-        if (j===arr.length-1) {
-            out += `${arr[j]}`
-        } else {
-            out += `${arr[j]} `
-        }
-        j++
     }
     return out
 }
 
-console.log(fibonacci(1))
+console.log(fibonacci(4))
